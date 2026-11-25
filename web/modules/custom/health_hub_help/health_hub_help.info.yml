@@ -1,0 +1,5 @@
+name: 'Health Hub Help Block'
+type: module
+description: 'Nightcoders demonstration module: an accessible, configurable "Need help now?" block.'
+package: 'Nightcoders Demo'
+core_version_requirement: ^10.3 || ^11

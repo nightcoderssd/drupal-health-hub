@@ -1,0 +1,19 @@
+uuid: 176636bf-dfef-4654-92a9-6b9ba8016089
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hours
+    - node.type.resource
+id: node.resource.field_hours
+field_name: field_hours
+entity_type: node
+bundle: resource
+label: Hours
+description: 'Write hours in plain words, for example "Mon–Fri, 9 AM–5 PM".'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

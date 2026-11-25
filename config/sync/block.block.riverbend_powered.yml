@@ -1,0 +1,22 @@
+uuid: 3d0feaae-37cb-4118-b35f-a8af0db580ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - riverbend
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: riverbend_powered
+theme: riverbend
+region: footer_bottom
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

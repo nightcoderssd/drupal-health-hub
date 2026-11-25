@@ -1,0 +1,20 @@
+/* Riverbend demo sub-theme overrides (Nightcoders demonstration project). */
+:focus-visible { outline: 3px solid #b35c00 !important; outline-offset: 2px; }
+.demo-notice { background: #fff4d6; border: 1px solid #c9a227; padding: 0.75rem 1rem; margin: 0 0 1.5rem; color: #1b2430; }
+.health-hub-help { border-inline-start: 6px solid #0b5d7a; background: #eef6f9; padding: 1rem 1.25rem; margin-block: 1.5rem; color: #1b2430; }
+.health-hub-help a { color: #063e52; font-weight: 700; }
+.health-hub-help__heading { margin-top: 0; font-size: 1.35rem; line-height: 1.3; }
+.health-hub-help__note { font-size: 0.9rem; }
+.view-resources .views-exposed-form { background: #f4f6f8; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem; }
+.view-resources .views-row { border: 1px solid #c5ced8; border-radius: 0.5rem; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.view-resources .views-row h2 { margin-top: 0; font-size: 1.35rem; }
+.view-resources .views-label { font-weight: 700; }
+
+/* Solid colors (no gradients or background images behind text) so contrast
+   can be verified by automated tools and meets WCAG 2.1 AA 1.4.3. */
+.site-branding { background-image: none; background-color: #0b5d7a; }
+.site-branding__name a, .site-branding__name a:visited { color: #ffffff; }
+.view-resources select.form-select { background-image: none; appearance: auto; -webkit-appearance: menulist; background-color: #ffffff; color: #1b2430; padding-inline-end: 0.75rem; }
+.site-footer { background-image: none; background-color: #1b2430; }
+.site-footer, .site-footer a, .site-footer .block { color: #ffffff; }
+main > .demo-notice { grid-column: 1 / -1; width: 100%; }

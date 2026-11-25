@@ -1,0 +1,22 @@
+uuid: 35c3a7a9-dcb8-4a62-b861-dedfd47fc764
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - riverbend
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: riverbend_breadcrumbs
+theme: riverbend
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

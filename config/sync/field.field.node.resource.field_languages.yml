@@ -1,0 +1,21 @@
+uuid: cf7a27e0-abf8-4423-bce1-831236a0334f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_languages
+    - node.type.resource
+  module:
+    - options
+id: node.resource.field_languages
+field_name: field_languages
+entity_type: node
+bundle: resource
+label: 'Languages offered'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

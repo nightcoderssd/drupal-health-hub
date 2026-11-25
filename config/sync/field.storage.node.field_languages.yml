@@ -1,0 +1,36 @@
+uuid: cba66f71-f996-49d6-9cf1-2b19bf1a0ab9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_languages
+field_name: field_languages
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: en
+      label: English
+    -
+      value: es
+      label: Spanish
+    -
+      value: vi
+      label: Vietnamese
+    -
+      value: tl
+      label: Tagalog
+    -
+      value: zh
+      label: Chinese
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

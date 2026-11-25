@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * "Need help now?" panel. Uses a labelled region so screen reader users can
+ * find it from the landmarks list.
+ */
+#}
+<section class="health-hub-help" aria-labelledby="health-hub-help-heading">
+  <h2 id="health-hub-help-heading" class="health-hub-help__heading">{{ heading }}</h2>
+  <p>
+    {{ 'Call'|t }} <a href="tel:{{ phone|replace({' ': '', '-': ''}) }}">{{ phone }}</a>{% if hours %} &mdash; {{ hours }}{% endif %}
+  </p>
+  {% if note %}<p class="health-hub-help__note">{{ note }}</p>{% endif %}
+</section>

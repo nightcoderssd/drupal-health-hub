@@ -1,0 +1,9 @@
+uuid: ae6cbd33-48fc-4b5e-95f5-e5d39c62e134
+langcode: en
+status: true
+dependencies: {  }
+name: 'Resource category'
+vid: resource_category
+description: 'Type of service, such as Testing or Vaccines.'
+weight: 0
+new_revision: false

@@ -1,0 +1,24 @@
+uuid: 8240c316-969e-4cb8-94d1-fd4721167576
+langcode: en
+status: true
+dependencies:
+  module:
+    - health_hub_help
+  theme:
+    - riverbend
+id: riverbend_help_now
+theme: riverbend
+region: sidebar
+weight: 0
+provider: null
+plugin: health_hub_help_now
+settings:
+  id: health_hub_help_now
+  label: 'Need help now?'
+  label_display: '0'
+  provider: health_hub_help
+  heading: 'Need help now?'
+  phone: 555-0104
+  hours: 'Every day, 8 AM to 8 PM'
+  note: 'This is a fictional number on a demonstration site.'
+visibility: {  }

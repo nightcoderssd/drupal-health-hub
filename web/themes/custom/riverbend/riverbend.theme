@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Riverbend theme hooks.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function riverbend_preprocess_page(array &$variables): void {
+  $variables['demo_notice'] = t('Demonstration project built by Nightcoders, LLC in November 2026. Riverbend County, its services and phone numbers are fictional. This site is not affiliated with any health department or organization.');
+}

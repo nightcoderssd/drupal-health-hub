@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Hooks for the Health Hub Help Block demonstration module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function health_hub_help_theme($existing, $type, $theme, $path) {
+  return [
+    'health_hub_help' => [
+      'variables' => [
+        'heading' => NULL,
+        'phone' => NULL,
+        'hours' => NULL,
+        'note' => NULL,
+      ],
+    ],
+  ];
+}

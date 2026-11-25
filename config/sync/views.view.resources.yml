@@ -1,0 +1,284 @@
+uuid: 0d966a89-0826-4fa7-bad6-5b64c2ecd8be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_cost
+    - field.storage.node.field_hours
+    - field.storage.node.field_languages
+    - field.storage.node.field_phone
+    - field.storage.node.field_resource_category
+    - node.type.resource
+    - system.menu.main
+    - taxonomy.vocabulary.resource_category
+  module:
+    - node
+    - options
+    - taxonomy
+    - telephone
+    - text
+    - user
+id: resources
+label: Resources
+module: views
+description: 'Searchable resource directory with exposed filters.'
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Find services'
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+          label: ''
+          element_type: h2
+          element_label_colon: false
+          type: string
+          settings:
+            link_to_entity: true
+        body:
+          id: body
+          table: node__body
+          field: body
+          entity_type: node
+          entity_field: body
+          plugin_id: field
+          label: ''
+          element_label_colon: false
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 300
+        field_resource_category:
+          id: field_resource_category
+          table: node__field_resource_category
+          field: field_resource_category
+          entity_type: node
+          entity_field: field_resource_category
+          plugin_id: field
+          label: Category
+          element_label_colon: true
+          type: entity_reference_label
+          settings:
+            link: false
+        field_hours:
+          id: field_hours
+          table: node__field_hours
+          field: field_hours
+          entity_type: node
+          entity_field: field_hours
+          plugin_id: field
+          label: Hours
+          element_label_colon: true
+          type: string
+          settings: {  }
+        field_cost:
+          id: field_cost
+          table: node__field_cost
+          field: field_cost
+          entity_type: node
+          entity_field: field_cost
+          plugin_id: field
+          label: Cost
+          element_label_colon: true
+          type: list_default
+          settings: {  }
+        field_languages:
+          id: field_languages
+          table: node__field_languages
+          field: field_languages
+          entity_type: node
+          entity_field: field_languages
+          plugin_id: field
+          label: Languages
+          element_label_colon: true
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_rows: true
+          delta_limit: 0
+          multi_type: separator
+          separator: ', '
+        field_phone:
+          id: field_phone
+          table: node__field_phone
+          field: field_phone
+          entity_type: node
+          entity_field: field_phone
+          plugin_id: field
+          label: Phone
+          element_label_colon: true
+          type: telephone_link
+          settings: {  }
+      pager:
+        type: full
+        options:
+          items_per_page: 10
+      exposed_form:
+        type: basic
+        options:
+          submit_button: 'Show services'
+          reset_button: true
+          reset_button_label: 'Clear filters'
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          plugin_id: text_custom
+          empty: true
+          content: 'No services match these filters. Try clearing a filter.'
+      sorts:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
+          order: ASC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            resource: resource
+          group: 1
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+          operator: contains
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: 'Service name contains'
+            identifier: keyword
+            remember_roles:
+              authenticated: authenticated
+        field_resource_category_target_id:
+          id: field_resource_category_target_id
+          table: node__field_resource_category
+          field: field_resource_category_target_id
+          plugin_id: taxonomy_index_tid
+          operator: or
+          group: 1
+          exposed: true
+          expose:
+            operator_id: category_op
+            label: 'Type of service'
+            identifier: category
+            remember_roles:
+              authenticated: authenticated
+          vid: resource_category
+          type: select
+          limit: true
+        field_languages_value:
+          id: field_languages_value
+          table: node__field_languages
+          field: field_languages_value
+          plugin_id: list_field
+          operator: or
+          group: 1
+          exposed: true
+          expose:
+            operator_id: language_op
+            label: 'Language spoken'
+            identifier: language
+            remember_roles:
+              authenticated: authenticated
+      style:
+        type: default
+      row:
+        type: fields
+      query:
+        type: views_query
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          plugin_id: result
+          content: 'Showing @start–@end of @total services.'
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_cost'
+        - 'config:field.storage.node.field_hours'
+        - 'config:field.storage.node.field_languages'
+        - 'config:field.storage.node.field_phone'
+        - 'config:field.storage.node.field_resource_category'
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: resources
+      menu:
+        type: normal
+        title: 'Find services'
+        weight: 0
+        menu_name: main
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_cost'
+        - 'config:field.storage.node.field_hours'
+        - 'config:field.storage.node.field_languages'
+        - 'config:field.storage.node.field_phone'
+        - 'config:field.storage.node.field_resource_category'

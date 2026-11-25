@@ -1,0 +1,30 @@
+uuid: 6b1e4156-623e-446f-8999-645d1a707143
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_cost
+field_name: field_cost
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: free
+      label: Free
+    -
+      value: low
+      label: 'Low cost'
+    -
+      value: sliding
+      label: 'Sliding scale'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

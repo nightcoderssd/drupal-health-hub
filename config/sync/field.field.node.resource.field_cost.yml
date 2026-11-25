@@ -1,0 +1,21 @@
+uuid: 028c1178-0074-4c6f-85ed-f1e0c6f8d898
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cost
+    - node.type.resource
+  module:
+    - options
+id: node.resource.field_cost
+field_name: field_cost
+entity_type: node
+bundle: resource
+label: Cost
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,22 @@
+uuid: b08d6af2-6e0e-4c59-ab0e-59c2bc49ea83
+langcode: en
+status: true
+dependencies:
+  theme:
+    - riverbend
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: riverbend_secondary_local_tasks
+theme: riverbend
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

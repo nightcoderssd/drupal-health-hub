@@ -1,0 +1,16 @@
+block.settings.health_hub_help_now:
+  type: block_settings
+  label: 'Need help now? block'
+  mapping:
+    heading:
+      type: label
+      label: 'Heading'
+    phone:
+      type: string
+      label: 'Phone number'
+    hours:
+      type: label
+      label: 'Hours'
+    note:
+      type: label
+      label: 'Note'

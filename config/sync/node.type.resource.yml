@@ -1,0 +1,11 @@
+uuid: 246cbe8f-6d82-411a-9003-bc79e8a9d972
+langcode: en
+status: true
+dependencies: {  }
+name: Resource
+type: resource
+description: 'A health service or program listed in the resource directory.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

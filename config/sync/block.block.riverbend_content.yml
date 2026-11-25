@@ -1,0 +1,22 @@
+uuid: 054dc6c7-c8a8-4ba8-bba5-726e5374ed11
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - riverbend
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: riverbend_content
+theme: riverbend
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

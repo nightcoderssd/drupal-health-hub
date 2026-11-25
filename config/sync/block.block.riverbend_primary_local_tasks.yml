@@ -1,0 +1,22 @@
+uuid: 803cd616-5b6d-4ac3-ac3f-16e984c6e70a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - riverbend
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: riverbend_primary_local_tasks
+theme: riverbend
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }
